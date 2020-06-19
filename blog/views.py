@@ -88,14 +88,10 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
 
-def our_mission(request):
-    context = {"our_mission": "active"}
-    return render(request, 'blog/our_mission.html', context)
-
+def index(request):
+   return HttpResponse('hello from index')
 def about(request):
-    context = {"about_page": "active"}
-    return render(request, 'blog/about.html', context)
-
+   return HttpResponse('hello from about')
 def contact(request):
-    context = {"contact_page": "active"}
-    return render(request, 'blog/contact.html', context)
+   return HttpResponse('hello from contact')
+
