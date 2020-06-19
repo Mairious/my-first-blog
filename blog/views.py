@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from .models import Page
 
 
 
@@ -85,3 +86,7 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+def show_pages_menu(context):
+    pages_menu = Page.objects.filter(show_in_menu=True)
+    return {'pages_menu': pages_menu}
