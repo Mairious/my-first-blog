@@ -1,4 +1,6 @@
 {% load static %}
+{% include "navigation.html" %}
+
 <html>
     <head>
         <title>The Moonbeam Bakery</title>
@@ -17,7 +19,7 @@
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-                <h1><a href="/">The Moonbeam Bakery</a></h1>
+                <h1><a href="/">Moonbeam</a></h1>
                 <p>A natural delight</p>
         </div>        
         <div class="content container">
