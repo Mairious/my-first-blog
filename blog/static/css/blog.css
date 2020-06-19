@@ -1,8 +1,8 @@
 .page-header {
     background-color: #164155;
-    margin-top: 0;
+    margin-top: 0px;
     text-align: center;
-    padding: 200px, 200px, 200px, 200px;
+    padding: 200px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -10,6 +10,7 @@
     font-size: 100pt;
     text-decoration: none;
     text-align: center;
+    padding: 200px;
 }
 
 .page-header p, .page-header p a, .page-header p a:visited, .page-header p a:active {
