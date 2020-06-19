@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #59889F;
+    background-color: #164155;
     margin-top: 0;
     text-align: center;
     padding: 100px;
@@ -13,12 +13,24 @@
     padding: 200px;
 }
 
+.page-header p, {
+    color: #ffffff;
+    font-size: 20pt;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+
 .content {
     margin-left: 40px;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Dancing Script', cursive;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .date {
