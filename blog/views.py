@@ -5,6 +5,8 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+
 
 
 
@@ -85,3 +87,15 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+def our_mission(request):
+    context = {}
+    return render(request, 'blog/our_mission.html', context)
+
+def about(request):
+    context = {}
+    return render(request, 'blog/about.html', context)
+
+def contact(request):
+    context = {}
+    return render(request, 'blog/contact.html', context)
