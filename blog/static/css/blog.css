@@ -5,7 +5,7 @@
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #59889F;
+    color: #000000;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -15,7 +15,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
 }
 
 .date {
