@@ -89,13 +89,13 @@ def comment_remove(request, pk):
     return redirect('post_detail', pk=comment.post.pk)
 
 def our_mission(request):
-    context = {}
+    context = {"home_page": "active"}
     return render(request, 'blog/our_mission.html', context)
 
 def about(request):
-    context = {}
+    context = {"about_page": "active"}
     return render(request, 'blog/about.html', context)
 
 def contact(request):
-    context = {}
+    context = {"contact_page": "active"}
     return render(request, 'blog/contact.html', context)
