@@ -2,7 +2,7 @@
     background-color: #164155;
     margin-top: 0;
     text-align: center;
-    padding: 100px;
+    padding: 100px, 100px, 40px, 100px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
