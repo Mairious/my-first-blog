@@ -18,14 +18,14 @@
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Moonbeam</a>
               </div>
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">H O M E</a></li>
                 <li><a href="#">M I S S I O N</a></li>
                 <li><a href="#">P R O D U C T S</a></li>
                 <li><a href="#">C O N T A C T</a></li>
               </ul>
             </div>
-        </nav>          
+        </nav>       
         <div class="page-header">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -45,5 +45,21 @@
                 </div>
             </div>
         </div>
+        <footer class="container-fluid text-center">
+            <div class="col-sm-4">
+                <h3>Contact Us</h3>
+                <br>
+                <h4> Our address and contact info here.</h4>
+            </div>
+            <div class="col-sm-4">
+                <h3>Connect</h3>
+                <a href="#yourlinkhere" fa fa-facebook"></a>
+                <a href="#yourlinkhere" fa fa-google"></a>
+                <a href="#yourlinkhere" fa fa-twitter"></a>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/b.png" class="icon">
+            </div>
+        </footer>
     </body>    
 </html>
