@@ -23,8 +23,17 @@
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
+h1 {
     font-family: 'Dancing Script', cursive;
+}
+
+h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.page-header p {
+    font-family: 'Montserrat', sans-serif;
+    color: #f8ca4d;
 }
 
 p {
@@ -60,4 +69,17 @@ p {
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+.navbar .nav li a{ 
+    font-family: 'Raleway', sans-serif;
+    font-size: 12pt;
+    color: #df4e49;
+}
+
+.navbar .navbar-header a {
+    font-family: 'Dancing Script', cursive;
+    color: #164155;
+    background-color: #f8ca4d;
+    font-size: 20pt;
 }
