@@ -84,6 +84,7 @@ p {
 }
 
 .navbar .nav .active a:hover, .navbar .nav a:hover{
-    color: #f8ca4d
+    background-color: #f8ca4d;
+    color: #164155;
 }
     
