@@ -5,6 +5,8 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic.base import TemplateView #new
+from django.http import HttpResponse #new
 
 
 
@@ -86,3 +88,5 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
 
+def profile(request):
+    return render(request, 'blog/profile.html')
