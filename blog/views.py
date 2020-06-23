@@ -7,6 +7,8 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.views.generic.base import TemplateView #new
 from django.http import HttpResponse #new
+from .forms import PostForm
+
 
 
 
@@ -30,20 +32,6 @@ def post_new(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
-
-@login_required
-def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
 @login_required
@@ -88,5 +76,29 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
 
+@login_required
+def post_edit(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == "POST":
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'blog/post_edit.html', {'form': form})
+
 def profile(request):
     return render(request, 'blog/profile.html')
+
+def index(request):
+    return render(request, 'blog/index.html')
+
+def shop(request):
+    return render(request, 'blog/shop.html')
+
+def contact(request):
+    return render(request, 'blog/contact.html')
+    

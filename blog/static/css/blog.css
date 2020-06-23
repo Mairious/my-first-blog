@@ -18,6 +18,14 @@
     font-size: 20pt;
     text-align: center;
 }
+
+.sub-page-header h3 {
+    color: #164155;
+    font-size: 20pt;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Dancing Script', cursive;
+}
 .content {
     margin-left: 40px;
 }
@@ -87,3 +95,16 @@ p {
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
 }
+
+.navbar-toggler-collapsed, .nav .navbar .navbar-toggler{
+    color: #164155 !important;
+}
+
+.navbar .nav .form-inline my-w my-lg-0{
+    color: #164155 !important;
+
+}
+
+body { padding-top: 60px; }
+
+header { padding-top: 60px; }

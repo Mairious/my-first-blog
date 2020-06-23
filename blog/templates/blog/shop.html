@@ -34,17 +34,18 @@
               <a class="nav-link" href="{% url 'profile' %}"> A B O U T</a>
               </li>
               <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  S H O P</a> 
+              <a class="nav-link" href="{% url 'shop' %}">S H O P</a> 
+              <!-- DROPDOWN MENU STUFF FOR PRODUCTS. YOU ALSO HAVE TO ADD SOME STUFF ABOVE
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Something else here</a>
               </div>
+              -->
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">C O N T A C T</a>
+                  <a class="nav-link" href="{% url 'contact' %}">C O N T A C T</a>
               </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -53,6 +54,7 @@
           </form>
           </div>
       </nav>
+
       <!-- DEAD LOGIN FOR BLOG POSTING FROM DJANGOGIRLS TUTORIAL SECTION IS BELOW-->
 
       <div class="page-header">
@@ -67,9 +69,8 @@
         <p>A natural delight</p>
       </div>
       <div class="sub-page-header">
-        <h1>Home Page</h1>
+        <h1>Shop</h1>
       </div>
-
   
       <!-- FOOTER SECTION IS BELOW-->
     <!-- FOOTER IS NOT READY YET:
