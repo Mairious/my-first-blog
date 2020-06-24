@@ -4,7 +4,6 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
 
-
 urlpatterns = [
     path('', views.post_list, name='post_list'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
@@ -20,5 +19,6 @@ urlpatterns = [
     path('home', views.index, name='index'),
     path('shop', views.shop, name='shop'),
     path('contact', views.contact, name='contact'),
+    path('base', views.base, name='base'),
 
 ]

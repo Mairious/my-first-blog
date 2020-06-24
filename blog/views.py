@@ -101,4 +101,8 @@ def shop(request):
 
 def contact(request):
     return render(request, 'blog/contact.html')
+
+def base(request):
+    return render(request, 'blog/base.html')
+
     
