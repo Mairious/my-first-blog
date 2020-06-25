@@ -1,10 +1,18 @@
-
+body, p {
+    font-family: 'Lora', serif;
+}
+   
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 8vw;
+}
 
 /* carousel */
 .carousel {
     /* any dimensions are fine, it can be responsive with max-width */
     width: 100%;
-    height: ;
     transition: transform 5s ease, opacity 3s ease-out;
 }
 
@@ -19,7 +27,6 @@
     background-position: 50% 50%;
     width: 100%;
     height: 100%;
-    
 }
 
 .carousel-item::after {
@@ -30,91 +37,145 @@
     bottom:0;
     left:0;
     right:0;
-    background:rgba(224, 224, 224, 0.726);
+    background: #2f313138; /*changes background overlay carousel color */
   }
-
-
-.carousel .item img {
-    visibility: hidden;
-    width: 100%;
-}
 
 .item{
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-
-}
-
-.black-overlay{
-    position: absolute;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.carousel-caption{
-    text-align: center;
-    vertical-align: middle;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: initial;
 }
 
 .carousel-item h1{
-    font-size: 70pt;
-    color: #ffffff;
-
+    /* header size and color on the carousel */
+    font-family: 'Montserrat', sans-serif;
 }
-.div .container{
-    width: 25rem;
-}
-
 
 .overlay { 
-    color:rgb(0, 0, 0);
     position: absolute;
-    z-index:12;
-    left:22%;
-    top: 20%;
-    width:57vw;
+    z-index:12; 
+    left: 13%; /* how far from the left the carousel heading is */
+    top: 16%; /* how far from the top the carousel heading is */
+    width: 74vw; /* how large the carousel heading container is */
     text-align: center;
     padding: 0;
     margin: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: #426e86af; /*color of the background of the heading in the carousel */
+    border-radius: 6px;
+    padding: 1vw;
 }
 
-.overlay h1{
-    font-size: 15rem;
-    color: #ffffff;
-    text-align: center;
-    border-bottom: 1px #ffffff;
+.overlay h1{ /* font size, color, and text align of carousel title */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 11vw;
+    color: #F8F1E5;
 }
 
-.overlay p{
+.overlay p{ /* font size, color, text shadow, text algin of sub carousel title */
     font-size: 5rem;
-    color: #e9af0f;
+    color: #DBB04AFF;
     padding: 0;
     margin: 0;
-    text-shadow: #164155;
+    text-shadow: #97B3D0FF;
     text-align: center;
-
 }
 
+.carousel-item .btn:hover{
+    border-color: #f9ba32; /* color of outline of 'Who we are' button while transition */
+    background-color: #426e86; /* background color of 'who we are' button while transition*/
+    color: #F8F1E5; /* font color of 'who we are' button while transition */
+}
+
+.carousel-item .btn{ 
+    background-color: #f9ba32ad; /* background color of button in carousel*/
+    color: #2f3131; /* font color of button in carousel*/
+    text-emphasis: bold; 
+    font-size: 20px; /* font size of text in button in carousel*/
+    border-color: transparent; /* border color of button in carousel */
+    border-radius: 4rem; /* border rounded of button in carousel */
+    padding: 20px 30px !important; /* padding of button in carousel */
+    text-align: center;
+}
+
+.carousel-caption { /* positioning the buttons on carousel */
+    left: center;
+    top: 60%;
+}
 /* end carousel */
 
 
-.page-header {
+
+/* navbar */
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999; 
+    padding: 10px !important; /* padding on navbar */
+    opacity: 0.95; /* opacity of navbar*/
+}
+
+.form-inline{
+    color: #164155 !important; /* color for navbar icons" */
+    font-family: 'Raleway', sans-serif; /* font for rest of navbar buttons" */
+}
+
+.navbar .nav-link{
+    color: #426e86;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    color: #2f3131 /* font for brand "Moonbeam" */
+}
+.navbar-toggler:hover {
+    border-color: #426e86; /* border/outline of navbar toggler while hover */
+}
+
+.fas{
+    color: #F8F1E5; /* color for the navbar icon (3 lines for toggler)*/
+}
+
+body { 
+    padding-top: 60px; /* prevents navbar overlapping on body */
+}
+
+.navbar-toggler .button:hover{
+    border-color: #2f3131; /* color of outline of search button while transition */
+    color: #eaf8f8; /* font color of 'who we are' button */
+    background-color: #f9ba32; /* background color of 'who we are' button */
+}
+
+.btn-outline-success{
+    color: #F8F1E5; /* color of the text "search" */
+    border-color: #f9ba32; /* border/outline of search box button */
+    border-radius: 4rem;
+}
+
+.form-control{
+    border-radius: 5rem;
+}
+
+/* end navbar
+The background color of the navbar is in the nav class through "style"
+The background color of the navbar toggler is also in the nav class through "style"
+The background color of the search button is also in the nav class through "style"
+*/
+
+
+
+
+/* page header */
+.page-header { /* background color, text align of header */
     background-color: #164155;
     margin-top: 0px;
-    padding-top: 25px;
+    padding-top: 0px;
     text-align: center;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    /* color, font size, text align of h1 in page header*/
     color: #ffffff;
     font-size: 70pt;
     text-decoration: none;
@@ -123,45 +184,32 @@
 }
 
 .page-header p, .page-header p a, .page-header p a:visited, .page-header p a:active {
+    /* color, font size, text align of p in page header*/
     color: #ffffff;
     font-size: 20pt;
     text-align: center;
     padding: 0;
     margin: 0;
-
 }
 
-.sub-page-header h3 {
-    color: #164155;
-    font-size: 20pt;
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Dancing Script', cursive;
-}
-.content {
-    margin-left: 40px;
-}
-
-h1 {
-    font-family: 'Dancing Script', cursive;
-}
-
-h2, h3, h4 {
-    font-family: 'Raleway', sans-serif;
-}
-
-.page-header p {
+/*font changes*/
+.navbar a, .carousel-item .btn, .btn-outline-success, .form-control{
     font-family: 'Montserrat', sans-serif;
-    color: #e9af0f;
-    padding-bottom: 50px;
+    font-weight: 600;
+    color: #2f3131;
+    
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 5px;
-}
 
-.date {
+
+
+
+/* end page header */
+
+
+
+/* unused blog post css */
+/* .date {
     color: #828282;
 }
 
@@ -171,13 +219,6 @@ p {
 
 .post-form textarea, .post-form input {
     width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
 }
 
 .post {
@@ -190,52 +231,7 @@ p {
 
 .comment {
     margin: 20px 0px 20px 20px;
-}
+} */
 
-.navbar .nav { 
-    font-family: 'Raleway', sans-serif;
-    font-size: 12pt;
-    color: #164155;
-}
+/* end unused blog post css */
 
-.navbar {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-    padding: 10px !important;
-    opacity: 0.95;
-}
-
-.navbar-brand {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbar-toggler-collapsed, .nav .navbar .navbar-toggler{
-    color: #164155 !important;
-}
-
-.navbar .nav .form-inline my-w my-lg-0{
-    color: #164155 !important;
-
-}
-
-body { 
-    padding-top: 60px;
-
-}
-
-.btn {
-    position: relative;
-  }
-  .btn-overlay {
-      position: absolute;
-      padding: 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-      opacity: 0.5;
-      transition: opacity .5s;
-  }
-  

@@ -2,44 +2,40 @@
 {% load static %}
 
 <html lang="en">
-    <!-- HEAD SECTION IS BELOW-->
+<!-- HEAD SECTION IS BELOW-->
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>The Moonbeam Bakery</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Scroll reveal-->  
+      <!-- Scroll reveal-->  
       <script src="https://unpkg.com/scrollreveal"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/c9fd48d565.js" crossorigin="anonymous"></script>    <!-- Scroll reveal-->  
+      <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'js/blog.js' %}">
       <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
-    <!-- NAVBAR SECTION IS BELOW-->
-
+ 
+<!-- NAVBAR SECTION -->
   <body>
     <div>
-      <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light justify-content-between" style="background-color: #e3f2fd;">
+      <nav class="navbar navbar fixed-top navbar-expand-lg bg-custom justify-content-between" style="background-color: #f9ba32;">
           <a class="navbar-brand" href="{% url 'post_list' %}">Moonbeam</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" style="background-color: #2F3131;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars" ></i>        
           </button>
-      
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}"> H O M E <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="{% url 'profile' %}"> A B O U T</a>
+                <a class="nav-link" href="{% url 'profile' %}">About</a>
               </li>
               <li class="nav-item dropdown">
-              <a class="nav-link" href="{% url 'shop' %}">S H O P</a> 
+                <a class="nav-link" href="{% url 'shop' %}">Shop</a> 
               <!-- DROPDOWN MENU STUFF FOR PRODUCTS. YOU ALSO HAVE TO ADD SOME STUFF ABOVE
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">Action</a>
@@ -50,17 +46,18 @@
               -->
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{% url 'contact' %}">C O N T A C T</a>
+                  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
               </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <input class="form-control mr-sm-2" style="background-color: #F8F1E5;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" style="background-color: #426E86;"type="submit">Search</button>
           </form>
           </div>
       </nav>
+<!-- end navbar -->
 
-      <!-- DEAD LOGIN FOR BLOG POSTING FROM DJANGOGIRLS TUTORIAL SECTION IS BELOW-->
+<!-- DEAD LOGIN FOR BLOG POSTING FROM DJANGOGIRLS TUTORIAL SECTION IS BELOW-->
       <header>
         <div class="page-header">
           {% if user.is_authenticated %}
@@ -72,11 +69,12 @@
           {% endif %}
         </div>
       </header>
+<!-- end dead login -->
 
-  <!-- carousel -->
+<!-- carousel -->
       <div class="container">
-        <div class="overlay">
-          <h1 style="font-size:14vw;">Moonbeam</h1>
+        <div class="overlay" style="white-space: nowrap;">
+          <h1>Moonbeam</h1>
           <p style="font-size:4vw;">A natural delight</p>
         </div>
       </div>
@@ -90,16 +88,19 @@
           <div class="carousel-item active" data-interval="3800">
             <img class="d-block w-100" src="{% static 'blog/images/flower_mooncake.jpg' %}" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Who we are</button>
             </div>
           </div>
           <div class="carousel-item" data-interval="3800" data-interval="">
             <img class="d-block w-100" src="{% static 'blog/images/black_filling_mooncake.jpg' %}" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Shop for delicious mooncakes</button>
             </div>
           </div>
           <div class="carousel-item" data-interval="3800">
             <img class="d-block w-100" src="{% static 'blog/images/green_tea_mooncake.jpg' %}" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Contact us</button>
             </div>
           </div>
         </div>
@@ -113,11 +114,9 @@
           <span class="sr-only btn-overlay">Previous</span>
         </a>
       </div>
-
-
 <!-- end carousel -->
 
-  <!-- BOOTSTRAP FILES THAT MUST GO IN THIS ORDER DIRECTLY BEFORE </body> SECTION IS BELOW-->
+<!-- BOOTSTRAP FILES THAT MUST GO IN THIS ORDER DIRECTLY BEFORE </body> SECTION IS BELOW-->
       <script src="blog.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
