@@ -21,8 +21,10 @@
 <!-- NAVBAR SECTION -->
   <body>
     <div>
-      <nav class="navbar navbar fixed-top navbar-expand-lg bg-custom justify-content-between" style="background-color: #f9ba32;">
-          <a class="navbar-brand" href="{% url 'post_list' %}">Moonbeam</a>
+      <nav class="navbar navbar fixed-top navbar-expand-lg bg-custom justify-content-between " style="background-color: #f9ba32;">
+          <a class="navbar-brand" href="{% url 'post_list' %}">          
+            <img src="{% static 'blog/images/logo_blue.png' %}" width="40" height="40"alt="">
+            Moonbeam</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" style="background-color: #2F3131;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars" ></i>        
           </button>
@@ -106,15 +108,30 @@
         </div>
 
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="fas fa-arrow-circle-right" aria-hidden="true"></span>
           <span class="sr-only btn-overlay">Next</span>
         </a>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="fas fa-arrow-circle-left" size="9x" aria-hidden="true"></span>
           <span class="sr-only btn-overlay">Previous</span>
         </a>
       </div>
 <!-- end carousel -->
+      <div class="grid">
+        <div class="title">
+          <h1>Welcome to Moonbeam, where the light shines bright.</h1>
+        </div>        
+        <div class="header"></div>        
+        <div class="sidebar">
+          <img src="{% static 'blog/images/sliced_mooncake.jpg' %}" width="40" height="40"alt="">
+        </div>  
+        <div class="content">
+          <h2>Check out our new mooncake: Mr. Mojo Medjool</h2>      
+          <p>Mr. Mojo Medjool is a vegetarian mooncake made from sweet medjool dates, which are known for their great flavor.</p> 
+        </div>     
+        <div class="footer"></div>        
+      </div>
+
 
 <!-- BOOTSTRAP FILES THAT MUST GO IN THIS ORDER DIRECTLY BEFORE </body> SECTION IS BELOW-->
       <script src="blog.js"></script>

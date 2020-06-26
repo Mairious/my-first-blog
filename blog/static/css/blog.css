@@ -1,13 +1,102 @@
+/* fonts */
+
 body, p {
     font-family: 'Lora', serif;
 }
    
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 8vw;
 }
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 4vw;
+}
+/*font changes*/
+.navbar a, .carousel-item .btn, .form-control{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2f3131;
+    
+}
+
+/* end fonts */
+
+
+/* css grid */
+.grid{
+    display: grid; /* says that the display is a grid */
+    grid-template-columns: 1fr 1fr; /* tells how many (auto, 1fr)  columns and the size of each */
+    grid-template-areas: 
+    "title title"
+    "header header"
+    "sidebar sidebar"
+    "content content"
+    "footer footer";
+}
+
+.title{
+    grid-area: title;
+    padding: 2vw;
+}
+
+.header{
+    grid-area: header;
+    padding: 2vw;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    
+}
+.sidebar img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    grid-area: content;
+    padding: 2px 2vw 2px 2vw; 
+}
+
+.footer{
+    grid-area: footer;
+    padding: 2vw;
+
+}
+
+.grid div:nth-child(even){
+    background-color: #f8f1e5; /* tells background color of evenly numbered tiles */
+}
+
+.grid div:nth-child(odd){
+    background-color: #f8f1e5; /* tells background color of oddly numbered tiles */
+}
+
+  
+
+@media screen and (min-width: 736px){ /* this is for non phone users */
+    .grid{
+        display: grid; /* says that the display is a grid */
+        grid-template-columns: 1fr 1fr; /* tells how many (auto, 1fr)  columns and the size of each */
+        grid-template-areas: 
+        "title title"
+        "header header"
+        "sidebar content"
+        "footer footer";
+           
+    }
+    
+}
+
+/* end css grid */
+
 
 /* carousel */
 .carousel {
@@ -54,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 .overlay { 
     position: absolute;
     z-index:12; 
-    left: 13%; /* how far from the left the carousel heading is */
+    left: 12.4%; /* how far from the left the carousel heading is */
     top: 16%; /* how far from the top the carousel heading is */
     width: 74vw; /* how large the carousel heading container is */
     text-align: center;
@@ -112,18 +201,19 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999; 
-    padding: 10px !important; /* padding on navbar */
-    opacity: 0.95; /* opacity of navbar*/
-}
-
-.form-inline{
-    color: #164155 !important; /* color for navbar icons" */
-    font-family: 'Raleway', sans-serif; /* font for rest of navbar buttons" */
+    opacity: 1; /* opacity of navbar*/
+    padding-left: 1vw;
+    padding-bottom: 1;
 }
 
 .navbar .nav-link{
-    color: #426e86;
+    color: #426e86; /*color of navbar links 'home', 'about', etc.*/
 }
+
+.navbar .nav-link:hover{
+    color: #F8F1E5; /*color of navbar links 'home', 'about', etc.*/
+}
+
 
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
@@ -131,30 +221,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-toggler:hover {
     border-color: #426e86; /* border/outline of navbar toggler while hover */
+    transition: color 200ms ease-in-out;
 }
 
 .fas{
-    color: #F8F1E5; /* color for the navbar icon (3 lines for toggler)*/
+    color: #F8F1E5; 
+    font-size: 5vw;/* color for the navbar icon (3 lines for toggler)*/
 }
 
 body { 
-    padding-top: 60px; /* prevents navbar overlapping on body */
+    padding-top: 63px; /* prevents navbar overlapping on body */
 }
 
 .navbar-toggler .button:hover{
     border-color: #2f3131; /* color of outline of search button while transition */
-    color: #eaf8f8; /* font color of 'who we are' button */
-    background-color: #f9ba32; /* background color of 'who we are' button */
 }
 
 .btn-outline-success{
-    color: #F8F1E5; /* color of the text "search" */
     border-color: #f9ba32; /* border/outline of search box button */
-    border-radius: 4rem;
+    border-radius: 4rem; /*rounded for search button */
+    color: #f9ba32;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-control{
-    border-radius: 5rem;
+    border-radius: 4rem; /*rounded for search input */
 }
 
 /* end navbar
@@ -190,14 +281,6 @@ The background color of the search button is also in the nav class through "styl
     text-align: center;
     padding: 0;
     margin: 0;
-}
-
-/*font changes*/
-.navbar a, .carousel-item .btn, .btn-outline-success, .form-control{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #2f3131;
-    
 }
 
 
