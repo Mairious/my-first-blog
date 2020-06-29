@@ -15,14 +15,15 @@
       <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'js/blog.js' %}">
       <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+      <link rel="icon" type="image/png" href="{% static 'blog/images/favicon.png' %}"/>
     </head>
 
  
 <!-- NAVBAR SECTION -->
   <body>
     <div>
-      <nav class="navbar navbar fixed-top navbar-expand-lg bg-custom justify-content-between" style="background-color: #f9ba32;">
-          <a class="navbar-brand" href="{% url 'post_list' %}">          
+      <nav class="navbar navbar fixed-top navbar-expand-lg bg-custom justify-content-between " style="background-color: #f9ba32;">
+          <a class="navbar-brand" href="{% url 'base' %}">          
             <img src="{% static 'blog/images/logo_blue.png' %}" width="40" height="40"alt="">
             Moonbeam</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" style="background-color: #2F3131;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +61,7 @@
 <!-- end navbar -->
 
 <!-- DEAD LOGIN FOR BLOG POSTING FROM DJANGOGIRLS TUTORIAL SECTION IS BELOW-->
-      <header>
+      <!-- <header>
         <div class="page-header">
           {% if user.is_authenticated %}
           <a href="{% url 'post_new' %}" class="top-menu"><span class=""></span></a>
@@ -70,12 +71,147 @@
             <a href="{% url 'login' %}" class="top-menu"><span class=""></span></a>
           {% endif %}
         </div>
-      </header>
+      </header> -->
 <!-- end dead login -->
 
+<!-- carousel -->
+      <div class="container">
+        <div class="overlay" style="white-space: nowrap;">
+          <h1>Moonbeam</h1>
+          <p style="font-size:4vw;">A natural delight</p>
+        </div>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="3800">
+            <img class="d-block w-100" src="{% static 'blog/images/flower_mooncake.jpg' %}" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Who we are</button>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="3800" data-interval="">
+            <img class="d-block w-100" src="{% static 'blog/images/black_filling_mooncake.jpg' %}" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Shop for delicious mooncakes</button>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="3800">
+            <img class="d-block w-100" src="{% static 'blog/images/green_tea_mooncake.jpg' %}" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <button href="{% url 'index' %}" type="button" class="btn btn-outline-info">Contact us</button>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="fas fa-arrow-circle-right" aria-hidden="true"></span>
+          <span class="sr-only btn-overlay">Next</span>
+        </a>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="fas fa-arrow-circle-left" size="9x" aria-hidden="true"></span>
+          <span class="sr-only btn-overlay">Previous</span>
+        </a>
+      </div>
+<!-- end carousel -->
+
+<!-- css grid -->
+      <div class="grid">
+        <div class="title">
+          <h1>Welcome to Moonbeam, where the light shines bright.</h1>
+        </div>        
+        <div class="header">
+          <h3>Our mooncakes light up the night, with a bite of delight.</h3>
+        </div>        
+        <div class="side-image">
+          <img src="{% static 'blog/images/sliced_mooncake.jpg' %}" width="40" height="40"alt="">
+        </div>  
+        <div class="content">
+          <h2>Check out our spotlight mooncake: Mojo Medjool</h2>      
+          <p>Mojo Medjool is a vegetarian mooncake made from sweet medjool dates, which are known for their great flavor. They are 100% natural and packed with deliciousness.</p> 
+        </div>     
+        <div class="footer">
+        </div>        
+      </div>
+<!-- end css grid -->
+
+<!-- footer -->
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>Company</h2>
+        <div class="content">
+          <p>We strive to create delicious mooncakes made of all natural ingredients. All of our mooncakes are handcrafted and made with care.</p>
+          <div class="social">
+            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
+            <a href="#"><span class="fab fa-twitter" aria-hidden="true"></span></a>
+            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram" aria-hidden="true"></span></a>
+            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
+            <span class="text">Birendranagar, Surkhet</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt" aria-hidden="true"></span>
+            <span class="text">+089-765432100</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope" aria-hidden="true"></span>
+            <span class="text">abc@example.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- contact form -->
+      <div class="right box">
+        <h2>Contact us - {{ name }}</h2>
+        <p> this {{name}}</p>
+        <div class="content">
+          <form action="{% url 'base' %}" method="post">
+            {% csrf_token %}
+            <div class="name">
+              <input type ="text" name="name" class="form-control mb-30" placeholder="Your Name">
+            </div>
+            <div class="email">
+              <input class="form-control mb 30" type="email" required="" name="email" placeholder="Your Email">
+            </div>
+            <div class="msg">
+              <textarea class="form-control mb 30" rows="2" cols="25" required="" name="message" placeholder="Your Message"></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit" value="POST">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end contact form -->
+    <div class="bottom">
+      <center>
+        <small>
+          <span class="credit">Created by Maribelle C. | </span>
+          <span class="far fa-copyright" aria-hidden="true"></span><span> 2020 All rights reserved.</span>
+        </small>
+      </center>
+    </div>
+  </footer>
+<!-- end footer -->
+
+
+</body></html>
 
 <!-- BOOTSTRAP FILES THAT MUST GO IN THIS ORDER DIRECTLY BEFORE </body> SECTION IS BELOW-->
-      <script src="blog.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>        
