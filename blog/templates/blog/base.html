@@ -135,7 +135,11 @@
           <h2>Check out our spotlight mooncake: Mojo Medjool</h2>      
           <p>Mojo Medjool is a vegetarian mooncake made from sweet medjool dates, which are known for their great flavor. They are 100% natural and packed with deliciousness.</p> 
         </div>     
-        <div class="footer">
+        <div class="bottom">
+          <h2>About Us</h2>   
+          <p>We are bakers that care about the environment and natural living who try to embody the quote:</p>  
+          <p><quote><strong>"Let food be thy medicine and medicine be thy food" ~Hippocrates</strong></quote></p>
+          <button class="click-read-more" type="button" href="{% url 'profile' %}">Read more about our story.</button>    
         </div>        
       </div>
 <!-- end css grid -->
@@ -177,7 +181,6 @@
       <!-- contact form -->
       <div class="right box">
         <h2>Contact us - {{ name }}</h2>
-        <p> this {{name}}</p>
         <div class="content">
           <form action="{% url 'base' %}" method="post">
             {% csrf_token %}
@@ -198,7 +201,7 @@
       </div>
     </div>
     <!-- end contact form -->
-    <div class="bottom">
+    <div class="bottomf">
       <center>
         <span class="credit">Created by Maribelle C. | </span>
         <span class="far fa-copyright" aria-hidden="true"></span><span> 2020 All rights reserved.</span>
